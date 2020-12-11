@@ -1,2 +1,2 @@
 # comm-vim-env
-Common setting for Vim/Neovim
+Personal common setting for Vim/Neovim
