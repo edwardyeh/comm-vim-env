@@ -137,7 +137,8 @@ highlight Folded            ctermfg=179 ctermbg=none
 highlight FoldColumn        ctermfg=10 ctermbg=none
 highlight SpecialKey        ctermfg=21
 highlight NonText           ctermfg=21
-highlight SignColumn        ctermfg=10 ctermbg=0 
+"highlight SignColumn        ctermfg=10 ctermbg=0 
+highlight SignColumn        ctermfg=10 ctermbg=none 
 highlight SpellBad          cterm=reverse ctermbg=9 
 highlight SpellCap          cterm=reverse ctermbg=21 
 highlight SpellRare         cterm=reverse ctermbg=13 
@@ -147,8 +148,11 @@ highlight TabLineFill       cterm=reverse
 highlight Underlined        ctermfg=13 
 "" Other
 highlight Ignore            ctermfg=15 ctermfg=0
-highlight Error             ctermfg=15 ctermbg=9
+"highlight Error             ctermfg=15 ctermbg=9
+highlight Error             ctermfg=15 ctermbg=124
 highlight Todo              ctermfg=0 ctermbg=11 
+"" YouCompleteMe
+highlight YcmErrorSection   ctermbg=52
 "" General Style
 highlight Normal            ctermfg=252
 highlight Comment           ctermfg=34
