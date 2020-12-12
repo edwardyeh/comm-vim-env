@@ -13,6 +13,7 @@ set ruler
 set nowrap
 set hlsearch
 set incsearch
+"set ignorecase
 set mouse=a
 set guifont=DejaVu\ Sans\ Mono
 set cursorline
@@ -34,7 +35,8 @@ set encoding=utf-8
 "========================================
 "=== Add Syntax =========================
 "========================================
-au BufNewFile,BufRead .vim,.vimrc setf vim
+autocmd BufNewFile,BufRead .vim,.vimrc setf vim
+autocmd BufEnter * set fo-=o
 
 "========================================
 "=== Personal Setting ===================
@@ -45,9 +47,7 @@ command! SC     set syntax=c
 command! SV     set syntax=verilog
 command! SCS    set syntax=tcsh
 command! SBS    set syntax=bash
-command! STC    set syntax=tcl
-command! VRC    vsp ~/.vimrc
-command! GRC    vsp ~/.gvimrc
+command! ST     set syntax=tcl
 command! DON    set diff scrollbind fdm=diff
 command! DOF    set nodiff noscrollbind fdm=marker
 command! B2H    %!xxd
