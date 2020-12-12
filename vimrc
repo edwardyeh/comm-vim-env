@@ -107,7 +107,8 @@ highlight Visual            ctermfg=238 ctermbg=250
 highlight VisualNOS         cterm=underline 
 highlight Directory         ctermfg=32
 highlight WildMenu          ctermfg=0 ctermbg=11
-highlight Pmenu             ctermfg=252 ctermbg=13 guibg=Magenta
+"highlight Pmenu             ctermfg=252 ctermbg=13 guibg=Magenta
+highlight Pmenu             ctermfg=252 ctermbg=89 guibg=Magenta
 highlight PmenuSel          ctermbg=15 
 highlight PmenuSbar         ctermbg=15 
 highlight PmenuThumb        cterm=reverse                            
@@ -168,4 +169,3 @@ highlight cType             ctermfg=32
 highlight cStructure        ctermfg=32
 highlight cStorageClass     ctermfg=32
 highlight cshVariables      ctermfg=13
-
