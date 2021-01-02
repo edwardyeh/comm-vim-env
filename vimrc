@@ -38,6 +38,8 @@ set encoding=utf-8
 autocmd BufNewFile,BufRead .vim,.vimrc setf vim
 autocmd BufEnter * set fo-=o
 
+let g:python_recommended_style = 0
+
 "========================================
 "=== Personal Setting ===================
 "========================================
