@@ -43,6 +43,14 @@ let g:python_recommended_style = 0
 "========================================
 "=== Personal Setting ===================
 "========================================
+"inoremap <A-h> <Left>
+"inoremap <A-j> <Down>
+"inoremap <A-k> <Up>
+"inoremap <A-l> <Right>
+
+tnoremap <Esc> <C-\><C-n>
+tnoremap <C-v><Esc> <Esc>
+
 command! FS     set fdm=syntax
 command! FM     set fdm=marker
 command! SC     set syntax=c
