@@ -62,7 +62,7 @@ command! DON    set diff scrollbind fdm=diff
 command! DOF    set nodiff noscrollbind fdm=marker
 command! B2H    %!xxd
 command! SCC    set cursorcolumn
-command! NSCC   set nocursorcolumn
+command! NCC    set nocursorcolumn
 
 " Comment
 command! -range -nargs=+ C   <line1>,<line2>s!^\( *.\)!<args>\1!g | noh
@@ -126,7 +126,8 @@ highlight PmenuSbar         ctermbg=15
 highlight PmenuThumb        cterm=reverse                            
 "" Cursor 
 highlight CursorLine        cterm=NONE ctermbg=234
-highlight CursorColumn      cterm=NONE ctermbg=234 ctermfg=14 
+highlight CursorColumn      cterm=NONE ctermbg=234
+"highlight CursorColumn      cterm=NONE ctermbg=234 ctermfg=14 
 "highlight Cursor            ctermfg=bg ctermbg=fg
 "highlight lCursor           ctermfg=bg ctermbg=fg
 "" Message
