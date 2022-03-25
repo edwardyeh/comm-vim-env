@@ -36,7 +36,9 @@ set encoding=utf-8
 "========================================
 "=== Add Syntax =========================
 "========================================
-autocmd BufNewFile,BufRead .vim,.vimrc setf vim
+autocmd BufNewFile,BufRead *.vim,*.vimrc setf vim
+autocmd BufNewFile,BufRead *.ini setf bash
+autocmd BufNewFile,BufRead *.f,*.vh setf verilog
 autocmd BufEnter * set fo-=o
 
 let g:python_recommended_style = 0
@@ -62,6 +64,7 @@ command! ST     set syntax=tcl
 command! DON    set diff scrollbind fdm=diff
 command! DOF    set nodiff noscrollbind fdm=marker
 command! B2H    %!xxd
+command! H2B    %!xxd -r
 command! SCC    set cursorcolumn
 command! NCC    set nocursorcolumn
 
@@ -98,9 +101,10 @@ command! -range CA  <line1>,<line2>s+;+; //+g | exec <line1>.",".<line2>."TCT" |
 " Verilog - input/output tag add
 command! -range ITA <line1>,<line2>s+,+, // (I)+g | noh
 command! -range OTA <line1>,<line2>s+,+, // (O)+g | noh
-
-" Other
-command! -nargs=+ TN tabn <args>
+" Verilog - port bracket add
+command! -range BA <line1>,<line2>s+,+ (),+g | exec <line1>.','.<line2>.'LRB' | exec <line1>.','.<line2>.'TCT' | <line1>,<line2>s+^ *\/\/ *+    \/\/+g | noh
+" Verilog - port declare
+command! -range PD <line1>,<line2>s+;.*+,+g | noh
 
 "========================================
 "=== Highlight Setting ==================
