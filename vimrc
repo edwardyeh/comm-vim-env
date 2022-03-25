@@ -26,6 +26,7 @@ set noro
 set laststatus=2
 "set diffexpr=
 "set list
+set ttymouse=xterm2
 
 set encoding=utf-8
 "set fileencoding=utf-8
