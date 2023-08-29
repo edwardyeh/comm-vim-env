@@ -27,6 +27,7 @@ set laststatus=2
 "set diffexpr=
 "set list
 set ttymouse=xterm2
+set belloff=all
 
 set encoding=utf-8
 "set fileencoding=utf-8
@@ -65,8 +66,11 @@ command! DON    set diff scrollbind fdm=diff
 command! DOF    set nodiff noscrollbind fdm=marker
 command! B2H    %!xxd
 command! H2B    %!xxd -r
-command! SCC    set cursorcolumn
-command! NCC    set nocursorcolumn
+command! SCUC   set cursorcolumn
+command! NCUC   set nocursorcolumn
+
+command! -nargs=1 SCOC set colorcolumn=<args>
+command!          NCOC set colorcolumn=0
 
 " Comment
 command! -range -nargs=+ C   <line1>,<line2>s!^\( *.\)!<args>\1!g | noh
@@ -129,6 +133,7 @@ highlight Pmenu             ctermfg=252 ctermbg=89 guibg=Magenta
 highlight PmenuSel          ctermbg=15 
 highlight PmenuSbar         ctermbg=15 
 highlight PmenuThumb        cterm=reverse                            
+highlight ColorColumn       ctermfg=15 ctermbg=52
 "" Cursor 
 highlight CursorLine        cterm=NONE ctermbg=234
 highlight CursorColumn      cterm=NONE ctermbg=234
