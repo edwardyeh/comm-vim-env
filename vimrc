@@ -28,6 +28,7 @@ set laststatus=2
 "set list
 set ttymouse=xterm2
 set belloff=all
+"set colorcolumn=80
 
 set encoding=utf-8
 "set fileencoding=utf-8
@@ -68,6 +69,7 @@ command! B2H    %!xxd
 command! H2B    %!xxd -r
 command! SCUC   set cursorcolumn
 command! NCUC   set nocursorcolumn
+command! CTAG   !ctags -R .
 
 command! -nargs=1 SCOC set colorcolumn=<args>
 command!          NCOC set colorcolumn=0
@@ -173,7 +175,7 @@ highlight Underlined        ctermfg=13
 highlight Ignore            ctermfg=15 ctermfg=0
 "highlight Error             ctermfg=15 ctermbg=9
 highlight Error             ctermfg=15 ctermbg=124
-highlight Todo              ctermfg=0 ctermbg=11 
+highlight Todo              cterm=bold ctermfg=178 ctermbg=none
 "" YouCompleteMe
 highlight YcmErrorSection   ctermbg=52
 "" General Style
