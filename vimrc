@@ -74,6 +74,12 @@ command! CTAG   !ctags -R .
 command! -nargs=1 SCOC set colorcolumn=<args>
 command!          NCOC set colorcolumn=0
 
+command! PSH    echo winheight(0)
+command! PSW    echo winwidth(0)
+
+command! -nargs=1 RSH exec "resize ". string(winheight(0)*<args>)
+command! -nargs=1 RSW exec "vert resize ". string(winwidth(0)*<args>)
+
 " Comment
 command! -range -nargs=+ C   <line1>,<line2>s!^\( *.\)!<args>\1!g | noh
 command! -range -nargs=+ CY  <line1>,<line2>s!^\( *\)\(.\)!\1<args>\2!g | noh
