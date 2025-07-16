@@ -75,11 +75,11 @@ command! GFP    let @+=expand("%:p")
 command! -nargs=1 SCOC set colorcolumn=<args>
 command!          NCOC set colorcolumn=0
 
-command! PSH    echo winheight(0)
-command! PSW    echo winwidth(0)
+command! PWH    echo winheight(0)
+command! PWW    echo winwidth(0)
 
-command! -nargs=1 RSH exec "resize ". string(winheight(0)*<args>)
-command! -nargs=1 RSW exec "vert resize ". string(winwidth(0)*<args>)
+command! -nargs=1 SWH exec "resize ". string(winheight(0)*<args>)
+command! -nargs=1 SWW exec "vert resize ". string(winwidth(0)*<args>)
 
 " Comment
 command! -range -nargs=+ C   <line1>,<line2>s!^\( *.\)!<args>\1!g | noh
