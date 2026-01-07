@@ -14,6 +14,7 @@ set nowrap
 set hlsearch
 set incsearch
 "set ignorecase
+set ttymouse=sgr
 set mouse=a
 set guifont=DejaVu\ Sans\ Mono
 set cursorline
@@ -70,7 +71,7 @@ command! H2B    %!xxd -r
 command! SCUC   set cursorcolumn
 command! NCUC   set nocursorcolumn
 command! CTAG   !ctags -R .
-command! GFP    let @+=expand("%:p")
+command! GFP    let @+=expand("%:p") | echo expand("%:p")
 
 command! -nargs=1 SCOC set colorcolumn=<args>
 command!          NCOC set colorcolumn=0
