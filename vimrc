@@ -26,7 +26,6 @@ set t_Co=256
 set laststatus=2
 "set diffexpr=
 "set list
-set ttymouse=xterm2
 set belloff=all
 "set colorcolumn=80
 
