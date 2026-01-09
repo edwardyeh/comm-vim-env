@@ -70,7 +70,7 @@ command! H2B    %!xxd -r
 command! SCUC   set cursorcolumn
 command! NCUC   set nocursorcolumn
 command! CTAG   !ctags -R .
-command! GFP    let @+=expand("%:p")
+command! GFP    let @+=expand("%:p") | echo expand("%:p")
 
 command! -nargs=1 SCOC set colorcolumn=<args>
 command!          NCOC set colorcolumn=0
